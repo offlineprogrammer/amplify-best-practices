@@ -1,10 +1,7 @@
-Here's the updated README file with more detailed instructions for step 3:
 
----
 
 ### README File:
 
-```markdown
 # Amplify Best Practices and Reference Guide
 
 This repository contains a comprehensive guide to using AWS Amplify Gen 2 effectively. It includes detailed instructions, examples, and best practices for modeling data relationships, setting up schemas, and configuring authentication.
