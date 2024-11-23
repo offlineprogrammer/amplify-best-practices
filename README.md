@@ -4,13 +4,14 @@
 
 # Amplify Best Practices and Reference Guide
 
-This repository contains a comprehensive guide to using AWS Amplify Gen 2 effectively. It includes detailed instructions, examples, and best practices for modeling data relationships, setting up schemas, and configuring authentication.
+This repository provides a comprehensive guide designed to be used as context for Amazon Q Developer Chat in your IDE via the '@workspace' command. By integrating this guide, you can enhance Amazon Q's capabilities and accuracy in generating AWS Amplify Gen 2 code. The guide includes detailed instructions, examples, and best practices for:
 
-## Overview
-The guide is designed for developers building applications with AWS Amplify Gen 2. It consolidates:
 - Data modeling techniques (e.g., one-to-many, one-to-one relationships)
 - Schema rules for accurate configuration
 - Authentication setup with external providers and custom attributes
+
+Using this guide as context ensures that Amazon Q has access to Amplify Gen 2 best practices, enabling it to provide more relevant and accurate code suggestions.
+
 
 ## File Contents
 The primary file in this repository is:
