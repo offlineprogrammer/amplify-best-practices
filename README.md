@@ -74,10 +74,6 @@ Contributions to enhance this guide are welcome! Submit a pull request or open a
 ## License
 This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Author
-Developed by [Your Name/Team Name].
+
 ```
 
----
-
-These expanded details in step 3 will ensure users have clear instructions to integrate and utilize the markdown file effectively with Amazon Q's workspace context. Let me know if you need any further adjustments!
