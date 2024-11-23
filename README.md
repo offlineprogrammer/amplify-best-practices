@@ -75,5 +75,3 @@ Contributions to enhance this guide are welcome! Submit a pull request or open a
 This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 
-```
-
