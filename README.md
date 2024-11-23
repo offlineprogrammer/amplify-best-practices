@@ -4,7 +4,7 @@
 
 # Amplify Best Practices and Reference Guide
 
-This repository provides a comprehensive guide designed to be used as context for Amazon Q Developer Chat in your IDE via the '@workspace' command. By integrating this guide, you can enhance Amazon Q's capabilities and accuracy in generating AWS Amplify Gen 2 code. The guide includes detailed instructions, examples, and best practices for:
+This repository provides a comprehensive guide designed to be used as context for Amazon Q Developer Chat in your IDE via the `@workspace` command. By integrating this guide, you can enhance Amazon Q's capabilities and accuracy in generating AWS Amplify Gen 2 code. The guide includes detailed instructions, examples, and best practices for:
 
 - Data modeling techniques (e.g., one-to-many, one-to-one relationships)
 - Schema rules for accurate configuration
