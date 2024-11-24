@@ -23,79 +23,84 @@ Here’s the updated **How to Use** section with the requested changes:
 
 Below is an example of how to integrate the `Amplify_Reference_and_Best_Practices.md` file into your project and use it for Amazon Q workspace context.
 
-### Step 1: Create a New Vite App with TypeScript
-1. Install Vite using the following command:
+### Step 1: Create a New App
+
+1. Run the following command to use Vite to create a React application::
    ```bash
-   npm create vite@latest my-vite-app -- --template react-ts
-   cd my-vite-app
-   ```
-2. Install dependencies:
-   ```bash
+   npm create vite@latest amplify_sample_app   -- --template react-ts -y
+   cd amplify_sample_app
    npm install
    ```
-3. Test the app to ensure it's running correctly:
+2. Open the project in Visual Studio Code:
+
    ```bash
-   npm run dev
+   code .
    ```
-   Open the development server link provided (e.g., `http://localhost:5173`) to confirm the app works.
+
 
 ---
 
 ### Step 2: Add the Markdown File to Your Project
-1. Copy the `Amplify_Reference_and_Best_Practices.md` file into your Vite project. Place it under the `src/docs` directory:
-   ```
-   src/docs/Amplify_Reference_and_Best_Practices.md
-   ```
-2. (Optional) If you want to render the markdown file in your app, install a markdown loader for Vite:
-   ```bash
-   npm install vite-plugin-md
-   ```
-3. Use the markdown file in your app by importing it into a component:
-   ```tsx
-   import markdownContent from './docs/Amplify_Reference_and_Best_Practices.md';
 
-   const App = () => {
-     return (
-       <div>
-         <h1>Amplify Guide</h1>
-         <pre>{markdownContent}</pre>
-       </div>
-     );
-   };
+1. Add AWS Amplify to your project by running the following command in your project root:
 
-   export default App;
-   ```
+```bash
+npm create amplify@latest -y
+```
+
+This will set up Amplify in your Vite project and initialize the required configuration files.
+
+1. Copy the Amplify_Reference_and_Best_Practices.md file into the root folder of your Vite project. The project structure should look like this:
+
+my-vite-app/
+├── amplify/
+├── public/
+├── src/
+├── node_modules/
+├── Amplify_Reference_and_Best_Practices.md
+├── package.json
+├── vite.config.ts
+└── ...
+
+This ensures that the markdown file is accessible and that Amplify is integrated into the project for any further development or configuration.
+
 
 ---
 
-### Step 3: Enable Workspace Indexing in Amazon Q
-1. Open the Amazon Q Developer Chat in your IDE or browser.
+### Step 3: Enable Workspace Indexing and Verify File Indexing in Amazon Q
+
+1. Open the Amazon Q Developer Chat in your IDE.
+   
 2. Type `@workspace` to enable workspace indexing. Amazon Q will guide you through enabling indexing for your project's directory. Follow the prompts.
 
----
+3. Once indexing is enabled, test that the markdown file is included by running a query in Amazon Q Developer Chat:
 
-### Step 4: Verify File Indexing
-1. Once indexing is enabled, test that the markdown file is included by running a query in Amazon Q Developer Chat:
-   ```bash
-   @workspace search "Schema rules for enums"
-   ```
-2. If the file is not indexed, ensure it is in the correct directory and indexing has completed successfully.
+```bash
+@workspace search "Schema rules for enums"
+```
 
 ---
 
-### Step 5: Use the File in Queries
+
+
+### Step 4: Use the File in Queries
 After successful indexing, reference the markdown file content in your queries to Amazon Q. Examples:
 ```bash
-@workspace Explain the relationships in src/docs/Amplify_Reference_and_Best_Practices.md
+
+@workspace Explain the relationships in Amplify_Reference_and_Best_Practices.md
+
 ```
 ```bash
+
 @workspace What are the authentication rules in Amplify_Reference_and_Best_Practices.md?
+
 ```
 
 ---
 
-### Step 6: Keep the File Updated
+### Step 5: Keep the File Updated
 If you make changes to the markdown file, refresh the workspace index in Amazon Q to reflect the updates:
+
 ```bash
 @workspace refresh
 ```
