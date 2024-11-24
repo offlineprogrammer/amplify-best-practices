@@ -3,19 +3,23 @@
 
 # Amplify Best Practices and Reference Guide
 
-This repository provides a comprehensive guide(**`Amplify_Reference_and_Best_Practices.md`**) designed to be used as context for Amazon Q Developer Chat in your IDE via the `@workspace` command. By integrating this guide, you can enhance Amazon Q's capabilities and accuracy in generating AWS Amplify Gen 2 code. The guide includes detailed instructions, examples, and best practices for:
+This repository provides comprehensive guides (**`amplify_contexts`**) designed to be used as context for Amazon Q Developer Chat in your IDE via the `@workspace` command. By integrating these guides, you can enhance Amazon Q's capabilities and accuracy in generating AWS Amplify Gen 2 code. The repository includes detailed instructions, examples, and best practices for:
 
 - Data modeling techniques (e.g., one-to-many, one-to-one relationships)
-- Schema rules for accurate configuration
+- Schema rules for precise and error-free configuration
 - Authentication setup with external providers and custom attributes
+- Custom types and attributes for AWS Cognito
 
-Using this guide as context ensures that Amazon Q has access to Amplify Gen 2 best practices, enabling it to provide more relevant and accurate code suggestions.
+Using these guides as context ensures that Amazon Q has access to Amplify Gen 2 best practices, enabling it to provide more relevant and accurate code suggestions.
 
-
+---
 
 ## How to Use
 
-Below is an example of how to integrate the `Amplify_Reference_and_Best_Practices.md` file into your project and use it for Amazon Q workspace context.
+Below is an example of how to integrate the files into your project and use them for Amazon Q workspace context.
+
+---
+
 
 ### Step 1: Create a New App
 
@@ -35,7 +39,7 @@ Below is an example of how to integrate the `Amplify_Reference_and_Best_Practice
 
 ---
 
-### Step 2: Add the Markdown File to Your Project
+### Step 2: Add the Folder to Your Project
 
 1. Add AWS Amplify to your project by running the following command in your project root:
 
@@ -45,7 +49,7 @@ npm create amplify@latest -y
 
 This will set up Amplify in your project and initialize the required configuration files.
 
-1. Copy the Amplify_Reference_and_Best_Practices.md file into the root folder of your project. The project structure should look like this:
+1. Copy the (**`amplify_contexts`**) folder into the root folder of your project. The project structure should look like this:
 
 ![project-structure](project_folders.png)
 
@@ -68,7 +72,8 @@ After successful indexing, reference the markdown file content in your queries t
 
 ```bash
 
-@workspace follow Amplify_Reference_and_Best_Practices.md, Design a backend schema for a coworking space booking system using Amplify Gen 2. Include models for users, spaces, bookings, and amenities.demonstrate how to get a list of spaces
+
+@workspace use the amplify_contexts folder to follow the rules and point out where you use it:Design a data schema for an e-commerce app using Amplify Gen 2. Include models for products, categories, orders, and users. Provide API usage example to show how to fetch products for an e-commerce app using Amplify Gen 2
 
 ```
 
