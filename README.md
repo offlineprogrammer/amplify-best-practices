@@ -11,11 +11,7 @@ This repository provides a comprehensive guide(**`Amplify_Reference_and_Best_Pra
 
 Using this guide as context ensures that Amazon Q has access to Amplify Gen 2 best practices, enabling it to provide more relevant and accurate code suggestions.
 
-## How to Use
 
-Here’s the updated **How to Use** section with the requested changes:
-
----
 
 ## How to Use
 
@@ -26,7 +22,7 @@ Below is an example of how to integrate the `Amplify_Reference_and_Best_Practice
 1. Run the following command to use Vite to create a React application::
 
    ```bash
-   npm create vite@latest amplify_sample_app   -- --template react-ts -y
+   npm create vite@latest amplify_sample_app   -- --template react-ts -y 
    cd amplify_sample_app
    npm install
    ```
@@ -34,7 +30,7 @@ Below is an example of how to integrate the `Amplify_Reference_and_Best_Practice
 2. Open the project in Visual Studio Code:
 
    ```bash
-   code .
+   code . -r
    ```
 
 ---
@@ -47,9 +43,9 @@ Below is an example of how to integrate the `Amplify_Reference_and_Best_Practice
 npm create amplify@latest -y
 ```
 
-This will set up Amplify in your Vite project and initialize the required configuration files.
+This will set up Amplify in your project and initialize the required configuration files.
 
-2. Copy the Amplify_Reference_and_Best_Practices.md file into the root folder of your project. The project structure should look like this:
+1. Copy the Amplify_Reference_and_Best_Practices.md file into the root folder of your project. The project structure should look like this:
 
 ![project-structure](project_folders.png)
 
@@ -63,11 +59,6 @@ This ensures that the markdown file is accessible and that Amplify is integrated
 
 2. Type `@workspace` to enable workspace indexing. Amazon Q will guide you through enabling indexing for your project's directory. Follow the prompts.
 
-3. Once indexing is enabled, test that the markdown file is included by running a query in Amazon Q Developer Chat:
-
-```bash
-@workspace search "Schema rules for enums"
-```
 
 ---
 
@@ -77,22 +68,11 @@ After successful indexing, reference the markdown file content in your queries t
 
 ```bash
 
-@workspace Explain the relationships in Amplify_Reference_and_Best_Practices.md
+@workspace follow Amplify_Reference_and_Best_Practices.md, Design a backend schema for a coworking space booking system using Amplify Gen 2. Include models for users, spaces, bookings, and amenities.demonstrate how to get a list of spaces
 
 ```
 
-```bash
 
-@workspace What are the authentication rules in Amplify_Reference_and_Best_Practices.md?
-
-```
 
 ---
 
-### Step 5: Keep the File Updated
-
-If you make changes to the markdown file, refresh the workspace index in Amazon Q to reflect the updates:
-
-```bash
-@workspace refresh
-```
