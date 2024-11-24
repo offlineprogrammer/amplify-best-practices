@@ -1,6 +1,5 @@
 
-
-### README File:
+### README File
 
 # Amplify Best Practices and Reference Guide
 
@@ -11,7 +10,6 @@ This repository provides a comprehensive guide(**`Amplify_Reference_and_Best_Pra
 - Authentication setup with external providers and custom attributes
 
 Using this guide as context ensures that Amazon Q has access to Amplify Gen 2 best practices, enabling it to provide more relevant and accurate code suggestions.
-
 
 ## How to Use
 
@@ -26,17 +24,18 @@ Below is an example of how to integrate the `Amplify_Reference_and_Best_Practice
 ### Step 1: Create a New App
 
 1. Run the following command to use Vite to create a React application::
+
    ```bash
    npm create vite@latest amplify_sample_app   -- --template react-ts -y
    cd amplify_sample_app
    npm install
    ```
+
 2. Open the project in Visual Studio Code:
 
    ```bash
    code .
    ```
-
 
 ---
 
@@ -50,27 +49,18 @@ npm create amplify@latest -y
 
 This will set up Amplify in your Vite project and initialize the required configuration files.
 
-1. Copy the Amplify_Reference_and_Best_Practices.md file into the root folder of your Vite project. The project structure should look like this:
+2. Copy the Amplify_Reference_and_Best_Practices.md file into the root folder of your project. The project structure should look like this:
 
-my-vite-app/
-├── amplify/
-├── public/
-├── src/
-├── node_modules/
-├── Amplify_Reference_and_Best_Practices.md
-├── package.json
-├── vite.config.ts
-└── ...
+![project-structure](project_folders.png)
 
 This ensures that the markdown file is accessible and that Amplify is integrated into the project for any further development or configuration.
-
 
 ---
 
 ### Step 3: Enable Workspace Indexing and Verify File Indexing in Amazon Q
 
 1. Open the Amazon Q Developer Chat in your IDE.
-   
+
 2. Type `@workspace` to enable workspace indexing. Amazon Q will guide you through enabling indexing for your project's directory. Follow the prompts.
 
 3. Once indexing is enabled, test that the markdown file is included by running a query in Amazon Q Developer Chat:
@@ -81,15 +71,16 @@ This ensures that the markdown file is accessible and that Amplify is integrated
 
 ---
 
-
-
 ### Step 4: Use the File in Queries
+
 After successful indexing, reference the markdown file content in your queries to Amazon Q. Examples:
+
 ```bash
 
 @workspace Explain the relationships in Amplify_Reference_and_Best_Practices.md
 
 ```
+
 ```bash
 
 @workspace What are the authentication rules in Amplify_Reference_and_Best_Practices.md?
@@ -99,9 +90,9 @@ After successful indexing, reference the markdown file content in your queries t
 ---
 
 ### Step 5: Keep the File Updated
+
 If you make changes to the markdown file, refresh the workspace index in Amazon Q to reflect the updates:
 
 ```bash
 @workspace refresh
 ```
-
