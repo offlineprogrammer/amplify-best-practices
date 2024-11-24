@@ -57,7 +57,7 @@ This ensures that the markdown file is accessible and that Amplify is integrated
 
 1. Open the Amazon Q Developer Chat in your IDE.
 
-2. Type `@workspace` to enable workspace indexing. Amazon Q will guide you through enabling indexing for your project's directory. Follow the prompts.
+2. Type `@workspace` to enable workspace indexing. Amazon Q will guide you through enabling indexing for your project's directory. 
 
 
 ---
