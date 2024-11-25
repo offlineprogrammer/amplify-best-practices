@@ -1,3 +1,4 @@
+# AUTH
 ---
 title: Set up Amplify AUTH - AWS Amplify Gen 2 Documentation
 source: https://docs.amplify.aws/react/build-a-backend/auth/set-up-auth/

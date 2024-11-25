@@ -1,3 +1,4 @@
+# TYPES
 /\*\*
 
 - AWS Cognito User Pool Attribute Configuration

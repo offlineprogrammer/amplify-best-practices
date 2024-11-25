@@ -1,3 +1,4 @@
+# MODELING
 ---
 title: Modeling relationships - AWS Amplify Gen 2 Documentation
 source: https://docs.amplify.aws/typescript/build-a-backend/data/data-modeling/relationships/
