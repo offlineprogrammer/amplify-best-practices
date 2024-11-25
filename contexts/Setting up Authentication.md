@@ -1,9 +1,12 @@
-# AUTH
+# AMPLIFYRULES
+
 ---
+
 title: Set up Amplify AUTH - AWS Amplify Gen 2 Documentation
 source: https://docs.amplify.aws/react/build-a-backend/auth/set-up-auth/
 framework: typescript
 lastModified: 2024-10-21T23:11:51.697Z
+
 ---
 
 - RULES THAT SHOULD BE ADHERED TO THE LAST WORD.
@@ -13,7 +16,7 @@ lastModified: 2024-10-21T23:11:51.697Z
   3. CALLBACK AND LOGOUT URLS SHOULD BE INSIDE THE "EXTERNALPROVIDERS" OBJECT.
   4. WHILE ADDING THE CUSTOM ATTRIBUTES, IF THE ATTRIBUTE YOU ARE ADDING DOESNT BELONG TO THE STANDARD USER ATTRIBUTES LIST THEN ADD IT AS A CUSTOM ATTRIBUTE LIKE THIS "CUSTOM:ATTRIBUTE_NAME" AND THIS DOESN'T SUPPORT "REQUIRED" FIELD SO IGNORE IT WHILE GENERATING THE ANSWER.
   5. WHILE ADDING THE CUSTOM ATTRIBUTES, MAKE SURE TO ALWAYS ADD THE "DATATYPE" FIELD AS IT IS A REQUIRED FIELD.
-  6. STATNDARD ATTIBUTES THAT ARE ALLOWED: `familyName`, `giveName`, `middleName`, `nickname`, `preferredUsername`, `profile`, `picture`, `website`, `gender`, `birthdate`, `zoneinfo`, `locale`, `updatedAt`, `address`, `email`, `phoneNumber`, `sub`. THE `userAttributes` ARE SUPPOSED TO BE OUTSIDE THE `loginWith` OBJECT
+  6. STATNDARD ATTIBUTES THAT ARE ALLOWED: `familyName`, `giveName`, `middleName`, `nickname`, `preferredUsername`, `profile`, `profilePicture`, `website`, `gender`, `birthdate`, `zoneinfo`, `locale`, `updatedAt`, `address`, `email`, `phoneNumber`, `sub`. THE `userAttributes` ARE SUPPOSED TO BE OUTSIDE THE `loginWith` OBJECT
 
   7. this is the Syntax you need to follow for externalProviders:
      externalProviders: {
@@ -39,16 +42,35 @@ lastModified: 2024-10-21T23:11:51.697Z
 
   8. THE `userAttributes` ARE SUPPOSED TO BE OUTSIDE THE `loginWith` OBJECT
      `// Example configuration for user attributes and login methods
- loginWith: {
-   // Specify login methods separately from user attributes
-   email: true, // Enable login with email
-   phoneNumber: false, // Disable login with phone number
-   username: true, // Enable login with username
- },userAttributes: {
-   email: true, // Attribute set as required
-   phoneNumber: false, // Attribute not required
-   givenName: true, // Attribute set as required
- },`
+loginWith: {
+  // Specify login methods separately from user attributes, ONLY MENTION THE LOGINMETHODS THAT ARE SUPPOSED TO BE TRUE
+  email: true, // Enable login with email
+  phone: false, // Disable login with phone number
+},userAttributes: {
+  email: true, // Attribute set as required
+  phoneNumber: false, // Attribute not required
+  givenName: true, // Attribute set as required
+},`
+  9. THIS IS THE WAY TO SETUP THE MULTIFACTOR AUTHENTHICATION
+     export const auth = defineAuth({
+     loginWith: {
+     email: true,
+     phone: true,
+     },
+     multifactor: {
+     mode: "OPTIONAL",
+     sms: true,
+     totp: false,
+     },
+     // IMPORTANT! THE LOGIC TO RESOLVE THIS VALUE CANNOT DETERMINE WHETHER EMAIL MFA IS ENABLED WHEN OVERRIDING THE RESOURCE.
+     // BE SURE TO PICK A RECOVERY OPTION APPROPRIATE FOR YOUR APPLICATION.
+     accountRecovery: "EMAIL_AND_PHONE_WITHOUT_MFA",
+     senders: {
+     email: {
+     fromEmail: "registrations@example.com",
+     },
+     },
+     })
 
 ```typescript
 import { defineAuth, secret } from "@aws-amplify/backend"; // Make sure to import `secret` for authentication.

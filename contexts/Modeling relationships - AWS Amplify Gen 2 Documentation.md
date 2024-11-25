@@ -1,9 +1,12 @@
-# MODELING
+# AMPLIFYRULES
+
 ---
+
 title: Modeling relationships - AWS Amplify Gen 2 Documentation
 source: https://docs.amplify.aws/typescript/build-a-backend/data/data-modeling/relationships/
 framework: typescript
 lastModified: 2024-10-21T23:11:46.997Z
+
 ---
 
 WHEN MODELING APPLICATION DATA, YOU OFTEN NEED TO ESTABLISH RELATIONSHIPS BETWEEN DIFFERENT DATA MODELS. IN AMPLIFY DATA, YOU CAN CREATE ONE-TO-MANY, ONE-TO-ONE, AND MANY-TO-MANY RELATIONSHIPS IN YOUR DATA SCHEMA. ON THE CLIENT-SIDE, AMPLIFY DATA ALLOWS YOU TO LAZY OR EAGER LOAD OF RELATED DATA.

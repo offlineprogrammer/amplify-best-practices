@@ -73,21 +73,21 @@ After successful indexing, reference the markdown file content in your queries t
 ```bash
 
 
-@workspace follow MODELING, SCHEMA and AUTH to develop a data model schema for a freelance marketplace using Amplify Gen 2. Include models for freelancers, clients, projects, bids, and reviews. Use Amplify Gen 2 to fetch a list of projects
+@workspace follow AMPLIFYRULES to to develop a data model schema for a freelance marketplace using Amplify Gen 2. Include models for freelancers, clients, projects, bids, and reviews. Use Amplify Gen 2 to fetch a list of projects
 
 ```
 
 ```bash
 
 
-@workspace follow MODELING, SCHEMA and AUTH to design a data schema for an event management application using Amplify Gen 2. Include models for users, events, and tickets. Show me how to use Amplify Gen 2 to fetch a list of events.
+@workspace follow AMPLIFYRULES to design a data schema for an event management application using Amplify Gen 2. Include models for users, events, and tickets. Show me how to use Amplify Gen 2 to fetch a list of events.
 
 ```
 
 ```bash
 
 
-@workspace follow MODELING, SCHEMA and AUTH to develop a data schema and API usage examples for a car rental service using Amplify Gen 2. Include models for vehicles, customers, rentals, and locations. Demonstrate how to fetch a list of vehicles
+@workspace follow AMPLIFYRULES to develop a data schema and API usage examples for a car rental service using Amplify Gen 2. Include models for vehicles, customers, rentals, and locations. Demonstrate how to fetch a list of vehicles
 
 ```
 
