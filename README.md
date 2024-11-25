@@ -3,7 +3,7 @@
 
 # Amplify Best Practices and Reference Guide
 
-This repository provides comprehensive guides (**`amplify_contexts`**) designed to be used as context for Amazon Q Developer Chat in your IDE via the `@workspace` command. By integrating these guides, you can enhance Amazon Q's capabilities and accuracy in generating AWS Amplify Gen 2 code. The repository includes detailed instructions, examples, and best practices for:
+This repository provides comprehensive guides (**`contexts`**) designed to be used as context for Amazon Q Developer Chat in your IDE via the `@workspace` command. By integrating these guides, you can enhance Amazon Q's capabilities and accuracy in generating AWS Amplify Gen 2 code. The repository includes detailed instructions, examples, and best practices for:
 
 - Data modeling techniques (e.g., one-to-many, one-to-one relationships)
 - Schema rules for precise and error-free configuration
@@ -49,7 +49,7 @@ npm create amplify@latest -y
 
 This will set up Amplify in your project and initialize the required configuration files.
 
-1. Copy the (**`amplify_contexts`**) folder into the root folder of your project. The project structure should look like this:
+1. Copy the (**`contexts`**) folder into the root folder of your project. The project structure should look like this:
 
 ![project-structure](project_folders.png)
 
@@ -73,10 +73,23 @@ After successful indexing, reference the markdown file content in your queries t
 ```bash
 
 
-@workspace use the amplify_contexts folder to follow the rules and point out where you use it:Design a data schema for an e-commerce app using Amplify Gen 2. Include models for products, categories, orders, and users. Provide API usage example to show how to fetch products for an e-commerce app using Amplify Gen 2
+@workspace follow MODELING, SCHEMA and AUTH to develop a data model schema for a freelance marketplace using Amplify Gen 2. Include models for freelancers, clients, projects, bids, and reviews. Use Amplify Gen 2 to fetch a list of projects
 
 ```
 
+```bash
+
+
+@workspace follow MODELING, SCHEMA and AUTH to design a data schema for an event management application using Amplify Gen 2. Include models for users, events, and tickets. Show me how to use Amplify Gen 2 to fetch a list of events.
+
+```
+
+```bash
+
+
+@workspace follow MODELING, SCHEMA and AUTH to develop a data schema and API usage examples for a car rental service using Amplify Gen 2. Include models for vehicles, customers, rentals, and locations. Demonstrate how to fetch a list of vehicles
+
+```
 
 
 ---
